@@ -108,6 +108,7 @@ export function UnitDrawer({ unitId, onClose, onRefresh }: UnitDrawerProps) {
       console.error(err)
     }
   }
+  const handleEmergencyStop = async () => {
     if (!unit) return
     try {
       await Units.emergencyStop(unit.unit_id)
